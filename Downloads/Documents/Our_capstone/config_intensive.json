@@ -1,0 +1,64 @@
+{
+  "training_config": {
+    "num_epochs": 50,
+    "batch_size": 8,
+    "learning_rate": 1e-4,
+    "weight_decay": 0.01,
+    "validation_split": 0.1,
+    "patience": 10,
+    "max_sequence_length": 128,
+    "qa_pairs_per_sentence": 8
+  },
+  
+  "model_config": {
+    "embedding_dim": 512,
+    "hidden_dim": 1024,
+    "num_layers": 8,
+    "num_attention_heads": 8,
+    "dropout_rate": 0.1,
+    "activation": "gelu"
+  },
+  
+  "corpus_config": {
+    "data_directory": "files",
+    "corpus_name": "Kumārasaṃbhava",
+    "min_sentence_length": 3,
+    "max_sentence_length": 50,
+    "min_token_frequency": 2
+  },
+  
+  "output_config": {
+    "model_save_path": "best_kumarasambhava_model.pth",
+    "checkpoint_save_path": "checkpoints/",
+    "log_file": "kumarasambhava_training.log",
+    "report_file": "training_report.json",
+    "plot_save_interval": 5,
+    "checkpoint_save_interval": 10
+  },
+  
+  "qa_generation_config": {
+    "question_types": [
+      "subject_extraction",
+      "character_identification", 
+      "divine_entity_recognition",
+      "grammatical_analysis",
+      "morphological_features",
+      "semantic_analysis",
+      "compound_analysis",
+      "metrical_analysis",
+      "epic_context_analysis",
+      "sentiment_analysis"
+    ],
+    "enable_navarasa_analysis": true,
+    "enable_character_recognition": true,
+    "enable_grammatical_features": true,
+    "enable_compound_analysis": true
+  },
+  
+  "device_config": {
+    "use_cuda": true,
+    "mixed_precision": true,
+    "gradient_checkpointing": false,
+    "dataloader_num_workers": 4
+  }
+}

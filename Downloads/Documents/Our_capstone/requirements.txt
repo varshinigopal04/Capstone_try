@@ -1,0 +1,38 @@
+# Enhanced Sanskrit QA System Requirements
+# ==========================================
+
+# Core PyTorch and ML libraries
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Transformers and NLP
+transformers>=4.30.0
+sentencepiece>=0.1.99
+
+# Sanskrit and Indic language support
+indic-transliteration>=2.3.0
+
+# Data processing and analysis
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Utilities
+tqdm>=4.62.0
+requests>=2.25.0
+colorama>=0.4.4
+
+# Network analysis (for attention visualization)
+networkx>=2.6.0
+
+# Development and logging
+logging
+
+# Optional: For enhanced Sanskrit processing
+# sanskrit-parser>=0.1.0  # Uncomment if available
